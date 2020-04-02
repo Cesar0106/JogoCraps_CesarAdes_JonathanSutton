@@ -1,6 +1,6 @@
 import random
 quant_fichas = 20
-print ("Bem vindo ao jogo de Craps! Nesse jogo voce poderá escolher entre 4 modalidades de apostas, sendo elas: Field, Twelve, Any Craps e Pass Line Bet. Você começara o jogo com 20 fichas, e ao chegar ao zero perderá.Você poderá sair do jogo ao digitar 'sair do jogo'.Por favor digite todos os camandos em lowercase(letra minuscula).Obrigado por jogar e bom jogo!")
+print ("Bem vindo ao jogo de Craps! Neste jogo, você poderá escolher entre 4 modalidades de apostas, sendo elas: Field, Twelve, Any Craps e Pass Line Bet. Você começará o jogo com 20 fichas, e se chegar no zero será eliminado do jogo. Você poderá sair da partida ao digitar 'sair do jogo'.Por favor digite todos os camandos em lowercase(letra minuscula).Obrigado por participar e bom jogo!")
 
 
 
@@ -18,27 +18,27 @@ while quant_fichas > 0:
     elif tipo_aposta == 'twelve':
         if sorteio == 12:
             quant_fichas += (30*num_fichas)
-            print ('O número sorteado foi {0}'.format(sorteio))
+            print ('A soma dos dados deu {0}'.format(sorteio))
             print ('Você possui agora {0} fichas'.format(quant_fichas))
 
         if sorteio != 12:
             quant_fichas += (- num_fichas)
-            print ('O número sorteado foi {0}'.format(sorteio))
+            print ('A soma dos dados deu {0}'.format(sorteio))
             print ('Você possui agora {0} fichas'.format(quant_fichas))
     elif tipo_aposta == 'field':
         if sorteio == 12:
             quant_fichas += (3*num_fichas)
-            print ('O número sorteado foi {0}'.format(sorteio))
+            print ('A soma dos dados deu {0}'.format(sorteio))
             print ('Você possui agora {0} fichas'.format(quant_fichas))
 
         elif sorteio == 2:    
             quant_fichas += (num_fichas*2)
-            print ('O número sorteado foi {0}'.format(sorteio))
+            print ('A soma dos dados deu {0}'.format(sorteio))
             print ('Você possui agora {0} fichas'.format(quant_fichas))
 
         elif sorteio == 3 or sorteio == 4 or sorteio == 9 or sorteio == 10 or sorteio == 11:
             quant_fichas += num_fichas
-            print ('O número sorteado foi {0}'.format(sorteio))
+            print ('A soma dos dados deu {0}'.format(sorteio))
             print ('Você possui agora {0} fichas'.format(quant_fichas))
         elif sorteio == 5 or sorteio == 6 or sorteio == 7 or sorteio == 8:
             quant_fichas += (- num_fichas)
@@ -48,12 +48,12 @@ while quant_fichas > 0:
     elif tipo_aposta == 'any craps':
         if sorteio ==2 or sorteio ==3 or sorteio == 12:
             quant_fichas += (7*num_fichas)
-            print ('O número sorteado foi {0}'.format(sorteio))
+            print ('A soma dos dados deu {0}'.format(sorteio))
             print ('Você possui agora {0} fichas'.format(quant_fichas))
 
         elif sorteio != 2 or sorteio != 3 or sorteio != 12:
             quant_fichas += (- num_fichas)
-            print ('O número sorteado foi {0}'.format(sorteio))
+            print ('A soma dos dados deu {0}'.format(sorteio))
             print ('Você possui agora {0} fichas'.format(quant_fichas))
 
     elif tipo_aposta == 'pass line bet':
